@@ -97,9 +97,6 @@ namespace :generate do
           File.open(application_filename, "w") do |f|
             f.write application_file.gsub("config.assets.enabled = true","config.assets.enabled = false")
           end
-          "config/initializers/wrap_parameters.rb".tap do |f|
-            sh "rm #{f}" if test ?f, f
-          end
         end
       end
     end
