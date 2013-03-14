@@ -80,7 +80,7 @@ module RSpec
         # Minitest.
         def assertion_method_names
           Test::Unit::Assertions.public_instance_methods.select{|m| m.to_s =~ /^(assert|flunk)/} +
-            [:build_message]
+            [:build_message, :message]
         end
 
         # @api private
